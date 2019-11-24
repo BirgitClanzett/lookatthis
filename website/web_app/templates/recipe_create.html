@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block body_block %}
+
+
+<div class="site-form">
+    <h2>Create a new Recipe</h2>
+    <hr>
+    <!--    enctyp is necessary due to the image upload field-->
+    <form class="textarea" action="{% url 'web_app:recipe_create' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token%}
+        {{ form }}
+        <input type="submit" value="create">
+    </form>
+</div>
+
+{% endblock %}

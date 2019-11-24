@@ -1,0 +1,36 @@
+<{% extends "base.html" %}
+{%  load static from staticfiles %}
+{% block body_block %}
+
+
+<h1 style="background-color:#00dba0; border-radius:4px; padding: 5px; text-align:center; margin-left:650px; margin-right:650px;color:white;">
+    {{object.title}}</h1>
+
+<div class="articles">
+
+    <div class="article">
+        <div class="article-detail">
+            <hr>
+            <h1 style="color:#00dba0">{{recipe_detail.title}}</h1>
+            <hr>
+            <p><img style="width:400px;height:300px" src="{{recipe_detail.image.url}}">
+            <hr>
+            <h3>{{recipe_detail.subtitle}}</h3>
+            <hr style="border: 1px solid #00dba0">
+            <h2 style="color:#00dba0">Ingredients</h2>
+            <p>{{recipe_detail.ingredients}}</p>
+            <hr>
+            <h2 style="color:#00dba0">Preparation</h2>
+            <p>{{recipe_detail.preparation}}</p>
+            <hr>
+
+
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+{% endblock %}

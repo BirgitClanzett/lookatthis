@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{%  load static from staticfiles %}
+{% block body_block %}
+
+
+<!--<h1 style="background-color:#00dba0; border-radius:4px; padding: 5px; text-align:center; margin-left:650px; margin-right:650px;color:white;">-->
+<!--    {{object.title}}</h1>-->
+
+<div class="articles">
+
+    <div class="article">
+        <div class="article-detail">
+            <hr>
+
+            <p><img src="{{articles_detail.category.image.url}}"><span style="margin-left:50px; font-size:2.0em; color:#00dba0">{{object.title}}</span></p>
+              <hr style="border:1px solid #00dba0">
+
+
+
+
+            <img src="{{articles_detail.thumb.url}}">
+
+            <hr>
+            {% if articles_detail.recipe != None %}
+            <hr>
+            <p>Recipe: {{ object.recipe}}</p>
+            {% endif%}
+
+            <p> Created on {{ object.date }} by <a href="">{{ object.author }}</a></p>
+            <hr>
+
+
+        </div>
+    </div>
+
+
+    <div class="article">
+        <div class="article-detail">
+            <hr>
+            <h2>Content</h2>
+                <hr style="border:1px solid #00dba0">
+            <p>{{ object.body }}</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="article-detail">
+                <hr style="border:1px solid #00dba0">
+            <h2>Comments</h2>
+             <hr style="border:1px solid #00dba0">
+            {% for comment in object.comments.all %}
+
+            {% if user.is_authenticated %}
+
+            {{comment.create_date}}
+            <p>{{comment.body}}</p>
+            <p>Created on {{comment.date }} by {{comment.author }}</p>
+            <hr style="border:1px solid #00dba0">
+            {% endif %}
+            {% empty %}
+
+            <p>No Comments</p>
+
+            {% endfor %}
+
+
+                        <nav>
+
+                                <form action="{% url 'web_app:articles_comment' object.id %}">
+                    <li>
+                       <button style="background-color: #00dba0; color:white; border : 1px solid #00dba0; border-radius:5px; font-size: 1.5em;" type="submit">Comment</button>
+                    </li>
+                </form>
+
+
+
+                {% if object.author == user %}
+                <form action="{% url 'web_app:articles_update' object.id %}">
+                    <li>
+                        <button style="background-color: #00dba0; color:white; border : 1px solid #00dba0; border-radius:5px; font-size: 1.5em;"type="submit">Update</button>
+                    </li>
+                </form>
+                <form action="{% url 'web_app:articles_delete' object.id %}">
+                    <li>
+                        <button style="background-color: #00dba0; color:white; border : 1px solid #00dba0; border-radius:5px; font-size: 1.5em;"type="submit">Delete</button>
+                    </li>
+                </form>
+
+                {% endif %}
+
+
+            </nav>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}

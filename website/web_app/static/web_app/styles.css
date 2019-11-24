@@ -1,0 +1,253 @@
+
+
+
+{%  load static from staticfiles %}
+
+
+
+body {
+  background-image: url('Scharnitz_bild.jpg');
+  background-repeat:repeat;
+  background-size: cover;
+}
+
+
+a{  text-decoration:  underline}
+
+a:hover
+{
+     text-decoration:none;
+    background-color: white;
+    border-radius:5px;
+
+
+}
+}
+.wrapper
+{
+    max-width: 960px;
+    margin:10px auto;
+    }
+
+div.wrapper h1{
+    text-align:center;
+    margin: 1px auto;
+    font-size:2.5em;
+}
+header{
+    text-align:center;
+  padding: 20px 0;
+}
+
+nav{justify-self:end;
+background-image:url ("157.jpg");}
+
+
+
+nav form
+{
+  display:inline-flex;
+  margin-left:0px;
+  font-size:em;
+
+}
+
+nav form li
+{
+  display:inline-grid;
+  margin-left:0px;
+  font-size:inherit;
+  color:white;
+
+}
+
+div {color:#ffffff;}
+
+nav button {border:0; ;color:#00dba0;font-size:larger;background:rgba(255,255,255,0);}
+
+.articles {
+display:grid;
+grid-template-columns:2fr;
+margin-left:650px;
+margin-right:650px;
+grid-gap:0px;
+}
+.article{
+  padding:10px;
+  border: 1px solid #00dba0;
+  border-radius:10px;
+  position:relative;
+  margin: 20px;
+
+}
+
+.wrapper .articles .article h2{
+  font-size:1 em;
+  color:#00dba0;
+}
+
+.wrapper .articles .article h3{
+  font-size:1 em;
+   color:#00dba0;
+}
+
+.article-detail .article{padding:0}
+
+ .article-detail img{
+  width:600px;
+  height:450px;
+  margin:10px;
+  position:center;
+}
+
+.wrapper .articles .article .article-detail h2 a{
+ text-align:center;
+ margin:20px auto;
+ font-size:1em;
+ color:#00dba0;
+}
+
+.article-detail .article a h2{
+ text-align:center;
+ margin:20px auto;
+ font-size:2em;
+ color:#00dba0;
+}
+
+
+.article-detail .article h3{
+ text-align:justify;
+ margin:60px;
+ font-size:0.8em;
+ color:#00dba0;
+
+}
+
+ .article-detail p a, .article-detail p a span {
+text-decoration: none;
+    margin-left: 20px;
+    margin-top: 0px;
+    background-color: none;
+    color: #00dba0;
+    font-size:1.5em;
+
+  }
+
+.article-detail .article h5{
+padding:0px;
+
+position:absolute;
+ font-size:1.5em;
+ right:0;
+color:#00dba0;
+ bottom:0;
+ margin:0
+ }
+
+
+.article-detail .article h4{
+padding:0px;
+
+position:absolute;
+ font-size:1.5em;
+ left:0;
+ color:#00dba0;
+ bottom:0;
+ margin:0
+ }
+
+
+.site-form{
+   /* margin-top:60px; */
+    padding:30px 30px 30px 30px;
+   /* background-color: #00dba0; */
+   /* font-size:1.2em; */
+   color: #00dba0;
+   border: 1px solid #00dba0;
+   border-radius:5px;
+   margin:20px 650px 20px 650px;
+ }
+
+
+.site-form input, .site-form textarea {
+   display:block;
+   margin:20px;
+   padding:10px;
+   color:#00dba0;
+ }
+
+button.highlight{
+     border:10px;
+     color:white;
+ }
+
+ .helptext, .helptext ul{
+   margin:0 auto 20px;
+   font-size:0.9em;
+   display:block;
+ }
+
+.errorlist li{
+ padding:10px;
+ list-style-type:none;
+
+ color:#00dba0;
+ margin: 10px 0;
+ font-size:1.2em bold;}
+
+ .errorlist{
+ padding:0;
+ }
+
+ .site-form input[type="submit"]{
+font-size:1.2em;
+padding:10px 20px 10px 20px;
+color:#00dba0;
+border-radius:5px;
+
+ }
+
+  .site-form input[type="file"]{
+font-size:1.2em;
+padding:10px 20px 10px 20px;
+color:#00dba0;
+border-radius:5px;
+
+ }
+
+.site-form a{
+font-size:3em;
+padding:10px 20px 10px 20px;
+color:#00dba0 ;
+border-radius:5px;
+width : 50px;
+height: 20px;
+
+ }
+
+ .article-detail p img {
+
+  width:40px;
+  height:40px;
+  margin: 0px 0px 0px 0px;
+  background:white;
+  border-radius:20px;
+  position:100px;
+
+  }
+ hr {border-color:#00dba0}
+
+
+.btn {
+    color: #00dba0;
+    text-decoration:none;};
+}
+
+.btn-primary:hover{
+    color: white;
+    background-color:black};
+}
+
+.wrapper.articles.paginator padding-left:200px}
+
+

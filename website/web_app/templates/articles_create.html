@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body_block %}
+
+
+<div class="site-form">
+    <h2>Create a new article to be posted</h2>
+    <hr>
+    <!--    enctyp is necessary due to the image upload field-->
+    <form class="textarea" action="{% url 'web_app:articles_create' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token%}
+        {{ form }}
+        <input type="submit" value="create">
+    </form>
+</div>
+<script src="/static/web_app/slugify.js"></script>
+{% endblock %}
+

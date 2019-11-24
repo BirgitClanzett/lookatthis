@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{%  load static from staticfiles %}
+{% block body_block %}
+
+
+
+<body>
+
+
+
+<form class="site-form" action="/accounts/signup/" method="post">
+<h1>Please, signup to my Homepage</h1>
+    <hr>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="SignUp">
+</form>
+</body>
+
+
+{% endblock %}

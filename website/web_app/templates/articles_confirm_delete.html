@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+   <div class="articles">
+
+        <div class="article">
+            <div class="article-detail">
+                <p><img src="{{articles_detail.category.image.url}}"></p>
+                <p> Created on {{ object.date }} by {{ object.author }}</p>
+                <hr>
+                <h2>{{object.title}}</h2>
+                <hr>
+                <p>{{ object.snippet }}</p>
+
+                 <form method="post">
+                    {% csrf_token%}
+                   <h2 style="color:#00dba0">Are you sure you want to delete </h2>
+                     <h2>{{ object }}?</h2>
+
+
+                    <input type="submit" class="btn btn-danger" value="Confirm">
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</form>
+
+{% endblock %}
